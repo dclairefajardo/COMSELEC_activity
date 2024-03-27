@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+	<title>Election FAQs</title>
+</head>
+
+<body style="background-image: url(./imgs/bg.png);">
+	<div class="nav">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a onclick="open_candidate()" href="#">List of Candidates</a>
+			<a onclick="open_form()" href="#">Pre-Application Form</a>
+			<a onclick="open_qualification()" href="#">Qualification</a>
+			<a onclick="open_mission()" href="#">Mission</a>
+			<a onclick="open_vision()" href="#">Vision</a>
+			<a onclick="location.href='https://www.facebook.com/USGTUPC'" target="_blank">USG FB Page</a>
+        </div>
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <h2>SEARCH FOR FUTURE TUPC USG</h2>
+        <div class="keys" onClick="location.href='MAIN_WINDOW.html'">
+            <p>HOME</p>
+        </div>
+        <div class="keys" onClick="location.href='About.html'">
+        	<p>ABOUT</p>
+        </div>
+        <div class="keys" onClick="location.href='FAQs.html'">
+            <p>FAQs</p>
+        </div>
+    </div>
+	<div class="faqs">
+        <div>
+            <h2>Election FAQs</h2>
+            <hr>
+            <h3>Q: Are there grade requirements to be eligible to run?</h3>
+            <p>A: Yes, all students must be in, and maintain, “good standing” with the University. Requirements vary amongst different colleges. In the College of Liberal Arts and Sciences (CLAS), a student must be not on either academic or disciplinary probation. CLAS requirements: 2.0 or higher, and not on disciplinary probation. Eligibility will be verified by the SEC, the Registrar, and the Office of Student Accountability.</p>
+            <h3>Q: Where can I find the election materials online?</h3>
+            <p>A: Elections information will be made available under the "Elections" tab of the main USG website. Campaign materials and forms will be made on the SEC Engage portal.</p>
+            <h3>Q: In what ways can a campaign interact with student organization leaders before the campaigning period?</h3>
+            <p>A: Prospective candidates are not allowed to contact heads of student organizations until after the approved candidate meeting. After campaigns have been verified at the meeting, they may contact heads of student orgs about meeting with them to secure support during the designated campaign period.
+            <br><br>
+            If you seek the support of a student org or business, you must fill out the appropriate paperwork available on Engage. Once the paperwork is approved by the SEC, you are allowed to claim support from a student org, but you are not allowed to claim support from a private business. Private business forms only allow for candidates to post campaign materials in the premises.</p>
+        </div>
+        <div class="ref">
+            <p>Reference: https://usg.uiowa.edu/get-involved/elections/election-faqs</p>
+        </div>
+	</div>
+	<hr>
+	<!--footer-->
+	<center>
+		<div class="footer">
+			<img src="./imgs/comlogo.png" width="50px">
+			<p>Commision on Student Elections</p>
+			<p>For concerns, email us at</p>
+			<a href="#">comselec.tupc.edu</a>
+		</div>
+	</center>
+
+    <dialog id="dialog_form">
+		<center>
+			<hr>
+			<h1>PRE-APPLICATION FORM</h1>
+			<hr>
+			<button id="close_form" onclick="close_form()"> CLOSE</button>
+			<p>Fill-up the necessary information below. This will serve as initial step for your filling of candidacy. After completing
+			the form, your pre-application will be evaluated by the COMSELEC screening committee. Successful pre-application will immediately
+			notified in their respective email addresses for filling of candidacy. Once you submit this form you can't change or modify your details.</p>
+			<table id="form_table">
+				<tr>
+					<td>
+						<div class="inputs">
+							<label for="stud_id">Student ID:</label>
+							<input type="text" id="stud_id" name="stud_id" placeholder="TUPC-XX-XXXX" required>
+						</div>
+						<div class="inputs">
+							<label for="position">POSITION:</label>
+							<select id="position">
+								<option value="#">Select Position</option>
+								<option value="President">President</option>
+								<option value="Vice President">Vice President</option>
+								<option value="Secretary-External">Secretary-Extenal</option>
+								<option value="Secretary-Internal">Secretary-Internal</option>
+								<option value="Tresurer">Treasurer</option>
+								<option value="Audithor">Audithor</option>
+								<option value="Business Manager">Business Manager</option>
+								<option value="Governor">Governor</option>
+								<option value="Senator">Senator</option>
+							</select>
+						</div>
+						<div class="inputs">
+							<label for="fname">First Name:</label>
+							<input type="text" id="fname" name="fname" required>
+						</div>
+						<div class="inputs">
+							<label for="lname">Last Name:</label>
+							<input type="text" id="lname" name="lname" required>
+						</div>
+						<div class="inputs">
+							<label for="mn">Middle Name (optional):</label>
+							<input type="text" id="mn" name="mn">
+						</div>
+						<div class="inputs">
+							<label for="extension">Name Extension (optional):</label>
+							<input type="text" id="extension" name="extension" placeholder="(ex. Jr.)">
+						</div>
+						<div class="inputs">
+							<label for="course">COURSE:</label>
+							<select id="course">
+								<option value="#">Select Course</option>
+								<option value="BET-COET">BET-COET</option>
+								<option value="BET-ET">BET-ET</option>
+								<option value="BET-CT">BET-CT</option>
+								<option value="BET-MT">BET-MT</option>
+								<option value="BET-AT">BET-AT</option>
+								<option value="BET-PPT">BET-PPT</option>
+								<option value="BET-ESET">BET-ESET</option>
+								<option value="BTTE-CP">BTTE-CP</option>
+								<option value="BTTE-EL">BTTE-EL</option>
+								<option value="BSIE-ICT">BSIE-ICT</option>
+								<option value="BSIE-HE">BSIE-HE</option>
+								<option value="BSIE-IA">BSIE-IA</option>
+								<option value="BSME">BSME</option>
+								<option value="BSEE">BSEE</option>
+								<option value="BSCE">BSCE</option>
+							</select>
+						</div>
+						<div class="inputs">
+							<label for="year">Year Level:</label>
+							<input type="number" id="year" name="year"  required>
+						</div>
+						<div class="inputs">
+							<label for="sec">Section:</label>
+							<input type="text" id="sec" name="sec" placeholder="(ex. A)" required>
+						</div>
+						<div class="inputs">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+						</div>
+						<div class="inputs">
+							<label for="no_yr">Years in TUPC:</label>
+							<input type="number" id="no_yr" name="no_year" required>
+						</div>
+						<div class="inputs">
+							<label for="units">Total No of Units:</label>
+							<input type="number" id="units" name="units" required>
+						</div>
+						<div class="inputs">
+							<label for="average">Average During Last Semester:</label>
+							<input type="number" id="average" name="average" required>
+						</div>
+							<button ID="submit" onclick="InsertData()">SUBMIT</button>
+					</td>
+					<td id="pic_loc">
+						<div id="profile-container">
+							<img src="./imgs/empty_pic.jpg" id="profile_pic">
+							<label for="file" id="upload_photo">Upload your Photo</label>
+							<br>
+							<input type="file" id="file" accept="image/jpeg, image/png, image/jpg" required>
+						</div>
+					</td>
+				</tr>
+			</table>
+	    </center>
+	</dialog>
+	<dialog id="dialog_candidate">
+	<button id="close_candidate" onclick="close_candidate()" style="float: right"> CLOSE</button>
+		<hr width="1200px">
+			<center>
+				<h2>LIST OF APPLICANTS</h2>
+				<hr width="1200px">
+				<table border="4" id="show">
+					<thead>
+						<tr>
+							<th>STUDENT ID</th>
+							<th>NAME</TH>
+							<th>POSITION</th>
+							<th>COURSE/YR/SECTION</th>
+							<th>EMAIL</th>
+							<th>PHOTO</th>
+						</tr>
+					</thead>
+				</table>
+			</center>
+	</dialog>
+
+    <dialog id="dialog_qualification">
+		<center>
+			<img src="./imgs/qualifications.png" width="700px">
+			<br><br>
+			<button id="close_qualification" onclick="close_qualification()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<dialog id="dialog_mission">
+		<center>
+			<img src="./imgs/mission.png" width="600px">
+			<br><br>
+			<button id="close_mission" onclick="close_mission()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<dialog id="dialog_vision">
+		<center>
+			<img src="./imgs/vision.png" width="600px">
+			<br><br>
+			<button id="close_vision" onclick="close_vision()">CLOSE</button>
+		</center>
+	</dialog>
+
+    <script src="sidebar.js"></script>
+	<script src="function.js" type="module"></script>
+
+</body>
+</html>

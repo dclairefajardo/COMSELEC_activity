@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://www.tupcavite.edu.ph/">
+	<link rel="preconnect" href="https://comselec-3e190-default-rtdb.firebaseio.com/">
+	<title>MIDTERM PROJECT</title>
+</head>
+
+<body>
+	<div class="nav">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a onclick="open_candidate()" href="#">List of Candidates</a>
+			<a onclick="open_form()" href="#">Pre-Application Form</a>
+			<a onclick="open_qualification()" href="#">Qualification</a>
+			<a onclick="open_mission()" href="#">TUP Mission</a>
+			<a onclick="open_vision()" href="#">TUP Vision</a>
+			<a onclick="location.href='https://www.facebook.com/USGTUPC'" target="_blank">USG FB Page</a>
+        </div>
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <h2>SEARCH FOR FUTURE TUPC USG</h2>
+        <div class="keys" onClick="open">
+                <p>HOME</p>
+        </div>
+        <div class="keys" onClick="open_about()">
+                <p>ABOUT</p>
+        </div>
+        <div class="keys" onClick="open_faqs()">
+                <p>FAQs</p>
+        </div>
+    </div>
+	<center>
+		<div class="comselec">
+			<img src="./imgs/COMSELEC.gif">
+		</div>
+	</center>
+	<center>
+		<div id="deadline_dt">
+			<h3>Deadline of Pre-Application</h3>
+			<h1>NOVEMBER 30, 2023</h1>
+			<button onclick="open_form()" id="apply_now" ><marquee behavior="" >BECOME A USG NOW!</marquee></button>
+		</div>
+	</center>
+	
+	<div class="grid_cont">
+		<dl id="Benefits" class="grid_item1">
+			<h1>BENEFITS OF BEING A USG OFFICERS</h1>
+			<dt>Leadership Experience:</dt>
+				<dd>Serving in a student government position allows individuals to develop and enhance their leadership skills. 
+				It provides practical experience in decision-making, communication, and teamwork.</dd>
+				<br>
+			<dt>Representation:</dt>
+				<dd>Student leaders often represent the student body in discussions with university administrators, faculty, and other stakeholders. 
+				This role allows students to voice their concerns and advocate for their needs.</dd>
+				<br>
+			<dt>Networking Opportunities:</dt>
+				<dd>Engaging in student government activities provides opportunities to network with fellow students, faculty, and even professionals 
+				outside the university. This can be valuable for future career opportunities.</dd>
+				<br>
+			<dt>Personal Development:</dt>
+				<dd>Being part of a student government helps individuals grow personally and professionally. 
+				It can improve public speaking skills, boost confidence, and foster a sense of responsibility.</dd>
+				<br>
+			<dt>Community Service:</dt>
+				<dd>Many student governments are involved in community service and outreach programs. 
+				Engaging in such activities allows students to contribute positively to the community and develop a sense of social responsibility.</dd>
+				<br>
+			<dt>Enhanced Communication Skills:</dt>
+				<dd>Student leaders often need to communicate effectively with diverse groups of people. This experience can enhance their written and verbal communication skills.</dd>
+				<br>
+			<dt>Problem-Solving Skills:</dt>	
+				<dd>Dealing with various issues and challenges within the student body or the university requires effective problem-solving skills. 
+				Student government positions provide opportunities to hone these skills.</dd>
+				<br>
+			<dt>Understanding Governance:</dt>
+				<dd>Serving in a student government role offers a practical understanding of governance structures, decision-making processes, and the dynamics 
+				of working within an organization.</dd>
+				<br>
+			<dt>Personal Satisfaction:</dt>	
+				<dd>Many individuals find personal satisfaction in contributing to the improvement of campus life, representing their peers, and making 
+				a positive impact on the university community.</dd>
+		</dl>
+		<div class="grid_item2">
+			<img src="./imgs/usg_logo.png" alt="usg_logo" id="usg_logo">
+			<img src="./imgs/usg_pic.jpg" alt="usg_pictur" id="usg_pic">
+			<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Ftupccomselec%2Fvideos%2F969022747856802%2F&show_text=false&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="2" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share; muted" allowFullScreen="true" id="usgvid"></iframe>
+		</div>
+	</div>
+	<center>
+		<div>
+			<h3>You may also visit the Official Website of Technological University of the Philippines - Cavite</h3>
+			<iframe src="https://www.tupcavite.edu.ph/" title="USG_FB Page"></iframe>
+		</div>
+	</center>
+	
+	<hr>
+
+	<!--footer-->
+	<center>
+		<div class="footer">
+			<img src="./imgs/comlogo.png" width="50px">
+			<p>Commision on Student Elections</p>
+			<p>For concerns, email us at</p>
+			<a href="#">comselec.tupc.edu</a>
+		</div>
+	</center>
+
+	<dialog id="dialog_form">
+		<center>
+			<hr>
+			<h1>PRE-APPLICATION FORM</h1>
+			<hr>
+			<p>Fill-up the necessary information below. This will serve as initial step for your filling of candidacy. After completing
+			the form, your pre-application will be evaluated by the COMSELEC screening committee. Successful pre-application will immediately
+			notified in their respective email addresses for filling of candidacy. Once you submit this form you can't change or modify your details. </p>
+			<table id="form_table">
+				<tr>
+					<td>
+						<div class="inputs">
+							<label for="stud_id">Student ID:</label>
+							<input type="text" id="stud_id" name="stud_id" placeholder="TUPC-XX-XXXX" required>
+						</div>
+						<div class="inputs">
+							<label for="position">POSITION:</label>
+							<select id="position">
+								<option value="#">Select Position</option>
+								<option value="President">President</option>
+								<option value="Vice President">Vice President</option>
+								<option value="Secretary-External">Secretary-Extenal</option>
+								<option value="Secretary-Internal">Secretary-Internal</option>
+								<option value="Tresurer">Treasurer</option>
+								<option value="Audithor">Audithor</option>
+								<option value="Business Manager">Business Manager</option>
+								<option value="Governor">Governor</option>
+								<option value="Senator">Senator</option>
+							</select>
+						</div>
+						<div class="inputs">
+							<label for="fname">First Name:</label>
+							<input type="text" id="fname" name="fname" required>
+						</div>
+						<div class="inputs">
+							<label for="lname">Last Name:</label>
+							<input type="text" id="lname" name="lname" required>
+						</div>
+						<div class="inputs">
+							<label for="mn">Middle Name (optional):</label>
+							<input type="text" id="mn" name="mn">
+						</div>
+						<div class="inputs">
+							<label for="extension">Name Extension (optional):</label>
+							<input type="text" id="extension" name="extension" placeholder="(ex. Jr.)">
+						</div>
+						<div class="inputs">
+							<label for="course">COURSE:</label>
+							<select id="course">
+								<option value="#">Select Course</option>
+								<option value="BET-COET">BET-COET</option>
+								<option value="BET-ET">BET-ET</option>
+								<option value="BET-CT">BET-CT</option>
+								<option value="BET-MT">BET-MT</option>
+								<option value="BET-AT">BET-AT</option>
+								<option value="BET-PPT">BET-PPT</option>
+								<option value="BET-ESET">BET-ESET</option>
+								<option value="BTTE-CP">BTTE-CP</option>
+								<option value="BTTE-EL">BTTE-EL</option>
+								<option value="BSIE-ICT">BSIE-ICT</option>
+								<option value="BSIE-HE">BSIE-HE</option>
+								<option value="BSIE-IA">BSIE-IA</option>
+								<option value="BSME">BSME</option>
+								<option value="BSEE">BSEE</option>
+								<option value="BSCE">BSCE</option>
+							</select>
+						</div>
+						<div class="inputs">
+							<label for="year">Year Level:</label>
+							<input type="number" id="year" name="year"  required>
+						</div>
+						<div class="inputs">
+							<label for="sec">Section:</label>
+							<input type="text" id="sec" name="sec" placeholder="(ex. A)" required>
+						</div>
+						<div class="inputs">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+						</div>
+						<div class="inputs">
+							<label for="no_yr">Years in TUPC:</label>
+							<input type="number" id="no_yr" name="no_year" required>
+						</div>
+						<div class="inputs">
+							<label for="units">Total No of Units:</label>
+							<input type="number" id="units" name="units" required>
+						</div>
+						<div class="inputs">
+							<label for="average">Average During Last Semester:</label>
+							<input type="number" id="average" name="average" required>
+						</div>
+							<button ID="submit" onclick="InsertData()">SUBMIT</button>
+					</td>
+					<td id="pic_loc">
+						<div id="profile-container">
+							<img src="./imgs/empty_pic.jpg" id="profile_pic">
+							<label for="file" id="upload_photo">Upload your Photo</label>
+							<br>
+							<input type="file" id="file" accept="image/jpeg, image/png, image/jpg" required>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<button id="close_form" onclick="close_form()">CLOSE</button>
+	    </center>
+	</dialog>
+
+	<dialog id="dialog_candidate">
+	<button id="close_candidate" onclick="close_candidate()" style="float: right"> CLOSE</button>
+		<hr width="900px" style="margin-left: 40px">
+			<center>
+				<h2>LIST OF APPLICANTS</h2>
+				<hr width="900px">
+				<table border="4" id="show">
+					<thead>
+						<tr>
+							<th>STUDENT ID</th>
+							<th>NAME</TH>
+							<th>POSITION</th>
+							<th>COURSE/YR/SECTION</th>
+							<th>EMAIL</th>
+							<th>PHOTO</th>
+						</tr>
+					</thead>
+				</table>
+			</center>
+	</dialog>
+
+	<dialog id="dialog_qualification">
+		<center>
+			<img src="./imgs/qualifications.png" width="700px">
+			<br><br>
+			<button id="close_qualification" onclick="close_qualification()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<dialog id="dialog_mission">
+		<center>
+			<img src="./imgs/mission.png" width="600px">
+			<br><br>
+			<button id="close_mission" onclick="close_mission()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<dialog id="dialog_vision">
+		<center>
+			<img src="./imgs/vision.png" width="600px">
+			<br><br>
+			<button id="close_vision" onclick="close_vision()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<!--about modal-->
+	<dialog id="dialog_about">
+		<div class="about">
+			<div>
+				<h1>ABOUT</h1>
+				<hr>
+				<p>This website is a project for filing a candidacy for USG Elections at Technological University of the Philippines - Cavite. 
+				This project was made by <b class="b_name" >Diane Claire M. Fajardo</b> and <b class="b_name">John Paul Villanueva</b> from Bachelor of Engineering Technology major in Computer Engineering Technology. 
+				Submitted on November 20, 2023.</p>
+			</div>
+			<center class="pics">
+				<img src="./imgs/dc.jpg" width="300px" id="dc">
+				<img src="./imgs/jp.jpg" width="300px" id="jp">
+			</center>
+			<center></center>
+				<p id="nname">Diane Claire M. Fajardo</p>
+				<p id="namme">John Paul Villanueva</p>
+			</center>
+		</div>
+		<center>
+			<button id="close_about" onclick="close_about()">CLOSE</button>
+		</center>
+	</dialog>
+
+	<!--FAQS Modal-->
+	<dialog id="dialog_faqs">
+		<div class="faqs">
+			<div>
+				<h2>Election FAQs</h2>
+				<hr>
+				<h3>Q: Are there grade requirements to be eligible to run?</h3>
+				<p>A: Yes, all students must be in, and maintain, “good standing” with the University. Requirements vary amongst different colleges. In the College of Liberal Arts and Sciences (CLAS), a student must be not on either academic or disciplinary probation. CLAS requirements: 2.0 or higher, and not on disciplinary probation. Eligibility will be verified by the SEC, the Registrar, and the Office of Student Accountability.</p>
+				<h3>Q: Where can I find the election materials online?</h3>
+				<p>A: Elections information will be made available under the "Elections" tab of the main USG website. Campaign materials and forms will be made on the SEC Engage portal.</p>
+				<h3>Q: In what ways can a campaign interact with student organization leaders before the campaigning period?</h3>
+				<p>A: Prospective candidates are not allowed to contact heads of student organizations until after the approved candidate meeting. After campaigns have been verified at the meeting, they may contact heads of student orgs about meeting with them to secure support during the designated campaign period.
+				<br><br>
+				If you seek the support of a student org or business, you must fill out the appropriate paperwork available on Engage. Once the paperwork is approved by the SEC, you are allowed to claim support from a student org, but you are not allowed to claim support from a private business. Private business forms only allow for candidates to post campaign materials in the premises.</p>
+			</div>
+			<div class="ref">
+				<p>Reference: https://usg.uiowa.edu/get-involved/elections/election-faqs</p>
+			</div>
+		</div>
+		<center>
+			<button id="close_faqs" onclick="close_faqs()">CLOSE</button>
+		</center>
+	</dialog>
+	
+	
+	<script src="function.js" type="module"></script>
+	<script src="sidebar.js"></script>
+	
+</body>
+</html>
